@@ -39,15 +39,15 @@ export class SongscontainerComponent implements OnInit {
     
     }
 
-    public getSelectSong(value :any){
-      if(!this.flagList){
+    public getSelectSong(value :any, value2:any){
+      
         this.songs.forEach(song => {
-          if(song.numCancion==value){
+          if(song.numDisco==value && song.numCancion==value2){
             this.selectSong = song;
             this.flagList=true;
           }
         });
-      }
+      
     }
 
   // public sendSong(num:Number){
