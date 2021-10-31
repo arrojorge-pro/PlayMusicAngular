@@ -1,3 +1,14 @@
-<p>App Component</p>
-<p>container</p>
-<app-songscontainer></app-songscontainer>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sd-12">
+      <app-player></app-player>
+    </div>
+    <div class="col-lg-6 col-sd-12">
+      <app-songscontainer></app-songscontainer>
+    </div>
+    <div class="col-lg-6 col-sd-12">
+      <app-caratula [(ngModel)]="caratulaAhora"></app-caratula>
+    </div>
+
+  </div>
+</div>

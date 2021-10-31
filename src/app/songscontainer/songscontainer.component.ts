@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Song } from '../Song';
 import { SongComponent } from '../song/song.component';
 
@@ -9,7 +9,7 @@ import { SongComponent } from '../song/song.component';
 })
 export class SongscontainerComponent implements OnInit {
 
-  songs!:Song[];
+  @Output() songs!:Song[];
   selectSong!:Song;
   flagList!:Boolean;
 
