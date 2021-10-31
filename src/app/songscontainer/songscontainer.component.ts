@@ -11,19 +11,20 @@ export class SongscontainerComponent implements OnInit {
 
   songs!:Song[];
   selectSong!:Song;
+  flagList!:Boolean;
 
   constructor() { 
-   
+    this.songs =[
+      (new SongComponent("mi carro","manolo",1956,"disco","estilo","caratula",1,1)),
+      (new SongComponent("mi carro2","manolo2",19562,"disco2","estilo2","caratula2",12,12))
+      
+  ];
+    this.flagList = false;
 
   }
 
   ngOnInit(): void {
-    this.songs =[
-      (new SongComponent("mi carro","manolo",1956,"disco","estilo","caratula",1,1)),
-      (new SongComponent("mi carro2","manolo2",19562,"disco2","estilo2","caratula2",12,12))
-
-
-  ];
+   
    
   }
 
@@ -39,10 +40,11 @@ export class SongscontainerComponent implements OnInit {
     }
 
     public getSelectSong(value :any){
-      if(value){
+      if(!this.flagList){
         this.songs.forEach(song => {
           if(song.numCancion==value){
             this.selectSong = song;
+            this.flagList=true;
           }
         });
       }

@@ -11,7 +11,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="clickable-row"  *ngFor="let song of songs">
+        <tr  *ngFor="let song of songs">
           <td>{{song.numCancion}}</td>
           <td>{{song.title}}</td>
           <td>{{song.artist}}</td>
@@ -49,7 +49,7 @@
         </div>
         <div class="modal-body">
 
-            <div>
+            <div *ngIf="flagList">
 
                 <td>1,001</td>
                 <td>{{selectSong.title}}</td>
