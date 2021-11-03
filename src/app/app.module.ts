@@ -9,19 +9,21 @@ import { SongscontainerComponent } from './songscontainer/songscontainer.compone
 import { CaratulaComponent } from './caratula/caratula.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     PlayerComponent,
     SongComponent,
     SongscontainerComponent,
-    CaratulaComponent
+    CaratulaComponent,
+  
 
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
