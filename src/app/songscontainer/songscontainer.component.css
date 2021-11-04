@@ -1,0 +1,9 @@
+span.itemt {
+    display:block;
+    float:left;
+    clear:both;
+}
+
+span.item{
+    display:block;
+}
