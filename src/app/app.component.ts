@@ -10,7 +10,7 @@ import { SongscontainerComponent } from './songscontainer/songscontainer.compone
 export class AppComponent {
   title = 'spaworker';
 
-  caratulaAhora!:String;
+  selectSong!:Song;
 
   constructor(){
     //si hay seleccionada una cancion en songs component entonces

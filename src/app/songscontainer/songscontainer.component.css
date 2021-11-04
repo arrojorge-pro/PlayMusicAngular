@@ -6,4 +6,10 @@ span.itemt {
 
 span.item{
     display:block;
+    float: right;
+}
+
+#fijo{
+   width: 100%;
+  
 }

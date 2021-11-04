@@ -1,4 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { AppComponent } from '../app.component';
+import { CaratulaComponent } from '../caratula/caratula.component';
 import { Song } from '../Song';
 import { SongComponent } from '../song/song.component';
 
@@ -10,8 +12,8 @@ import { SongComponent } from '../song/song.component';
 export class SongscontainerComponent implements OnInit {
 
   @Output() songs!:Song[];
-  selectSong!:Song;
-  flagList!:Boolean;
+  @Output() selectSong!:Song;
+  static flagList:Boolean = false;
 
   constructor() { 
     this.songs =[
@@ -19,7 +21,7 @@ export class SongscontainerComponent implements OnInit {
       (new SongComponent("mi carro2","manolo2",19562,"disco2","estilo2","caratula2",12,12))
       
   ];
-    this.flagList = false;
+    
 
   }
 
@@ -27,11 +29,6 @@ export class SongscontainerComponent implements OnInit {
    
    
   }
-
-  public detalle(){
-    alert("hola");
-  }
-
 
 
   onItemSelector(value :any) {
@@ -41,13 +38,23 @@ export class SongscontainerComponent implements OnInit {
 
     public getSelectSong(value :any, value2:any){
       
-        this.songs.forEach(song => {
-          if(song.numDisco==value && song.numCancion==value2){
-            this.selectSong = song;
-            this.flagList=true;
-          }
-        });
+      this.songs.forEach(song => {
+        if(song.numDisco==value && song.numCancion==value2){
+          this.selectSong = song;
+          SongscontainerComponent.flagList=true;
+        }
+      });
       
+    }
+
+    flagList(){
+      console.log(SongscontainerComponent.flagList);
+      return SongscontainerComponent.flagList;
+      console.log(SongscontainerComponent.flagList);
+    }
+
+    getSelect():Song{
+      return this.selectSong;
     }
 
   // public sendSong(num:Number){

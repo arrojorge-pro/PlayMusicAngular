@@ -1,19 +1,26 @@
+<app-caratula [cancion]='selectSong' ></app-caratula>
 
 
 <div class="container">
   <div class="row">
 
-    <div class="col-3"></div>
+    <div class="col-4"></div>
 
-      <div class="col-6">
+      <div id="fijo" class="col-4">
           <div class="list-group">
-            <a *ngFor="let song of songs" href="#" class="list-group-item list-group-item-action list-group-item-success text-center"><span class="itemt">NumDisco:</span> <span class="item">{{song.numDisco}}</span> <span class="itemt">Titulo:</span> <span class="item">{{song.title}}</span> <span class="itemt">Artista:</span> <span class="item">{{song.artist}}</span> </a>
+            <div *ngFor="let song of songs"
+                (click)="getSelectSong(song.numDisco, song.numCancion)"
+                class="list-group-item list-group-item-action list-group-item-success text-center">
+                    <a><span class="itemt">NumDisco:</span> <span class="item">{{song.numDisco}}</span> </a>
+                    <div><span class="itemt">Titulo:</span>  <span class="item">{{song.title}}</span> </div>
+                    <div><span class="itemt">Artista:</span> <span class="item">{{song.artist}}</span> </div>
+            </div>
           </div>
       </div>
         
-      <div class="col-3"></div>
+      <div class="col-4"></div>
   </div>
-    
+</div>
   <!-- Modal -->
   <div *ngIf="flagList">
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -62,4 +69,3 @@
       </div>
     </div>
   </div>
-</div>
