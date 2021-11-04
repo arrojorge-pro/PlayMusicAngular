@@ -18,7 +18,9 @@ export class SongscontainerComponent implements OnInit {
   constructor() { 
     this.songs =[
       (new SongComponent("mi carro","manolo",1956,"disco","estilo","caratula",1,1)),
-      (new SongComponent("mi carro2","manolo2",19562,"disco2","estilo2","caratula2",12,12))
+      (new SongComponent("mi carro2","manolo2",19562,"disco2","estilo2","caratula2",12,12)),
+      (new SongComponent("mi carro3","manolo3",1953,"disco3","estilo3","caratula3",33,33)),
+      (new SongComponent("mi carro4","manolo4",1954,"disco4","estilo4","caratula4",44,44)),
       
   ];
     
