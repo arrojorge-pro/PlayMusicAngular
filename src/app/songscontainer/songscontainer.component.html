@@ -11,7 +11,7 @@
             <div *ngFor="let song of songs"
                 (click)="getSelectSong(song.numDisco, song.numCancion)"
                 class="list-group-item list-group-item-action list-group-item-success text-center">
-                    <a><span class="itemt">NumDisco:</span> <span class="item">{{song.numDisco}}</span> </a>
+                    <div><span class="itemt">NumDisco:</span> <span class="item">{{song.numDisco}}</span> </div>
                     <div><span class="itemt">Titulo:</span>  <span class="item">{{song.title}}</span> </div>
                     <div><span class="itemt">Artista:</span> <span class="item">{{song.artist}}</span> </div>
             </div>
