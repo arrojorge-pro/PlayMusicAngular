@@ -2,8 +2,8 @@
 
 
 <div  class="card" style="width: 20rem;">
-    <img class="card-img-top" src="https://picsum.photos/500/500" alt="Card image cap">
-    <div class="card-body">
+    <img class="card-img-top" src="{{cancion.caratula}}" alt="Card image cap">
+    <div *ngIf="cancion.title!=''" class="card-body">
       <h5 class="card-title"><span> Disco: {{cancion.disco}}</span></h5>
       <p class="card-text"><span> Canción: {{cancion.numCancion}}</span></p>
       <p  class="card-text"><span>Título: {{cancion.title}}</span></p>
@@ -11,8 +11,7 @@
       <p  class="card-text"><span>Año: {{cancion.anio}}</span></p>
       <p  class="card-text"><span>Estilo: {{cancion.estilo}}</span></p>
       <p  class="card-text"><span>Carátula: {{cancion.caratula}}</span></p>
-      <app-player></app-player>
-      
     </div>
+    <app-player></app-player>
   </div>
 

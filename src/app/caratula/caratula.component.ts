@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Song } from '../Song';
+import { SongComponent } from '../song/song.component';
 import { SongscontainerComponent } from '../songscontainer/songscontainer.component';
 
 @Component({
@@ -19,6 +20,7 @@ export class CaratulaComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.cancion = new SongComponent("","",0,"","","assets/img/without.png",0,0);
   }
 
   public getCancion(){
