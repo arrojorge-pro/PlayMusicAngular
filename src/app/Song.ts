@@ -7,5 +7,6 @@ export interface Song {
     caratula:String;
     numDisco:Number;
     numCancion:Number;
+    url:String;
 
 }

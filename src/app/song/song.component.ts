@@ -16,7 +16,8 @@ export class SongComponent implements OnInit, Song {
   estilo: String;
   caratula: String;
   numDisco: Number;
-  numCancion: Number
+  numCancion: Number;
+  url:String;
 
   constructor(title:String,
               artist:String,
@@ -25,7 +26,8 @@ export class SongComponent implements OnInit, Song {
               estilo:String,
               caratula:String,
               numDisco:Number,
-              numCancion:Number) 
+              numCancion:Number,
+              url:String) 
     
     {
 
@@ -37,17 +39,7 @@ export class SongComponent implements OnInit, Song {
       this.caratula=caratula;
       this.numDisco=numDisco;
       this.numCancion=numCancion;
-       
-    // new Song(
-    // title,
-    // artist,
-    // anio,
-    // disco,
-    // estilo,
-    // caratula,
-    // numDisco,
-    // numCancion
-    // )
+      this.url=url;
     
   }
  ;
