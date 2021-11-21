@@ -9,6 +9,8 @@ import { PlayerComponent } from './player/player.component';
 import { SongComponent } from './song/song.component';
 import { SongscontainerComponent } from './songscontainer/songscontainer.component';
 import { CaratulaComponent } from './caratula/caratula.component';
+import { FilterPipe } from './filter.pipe';
+
 
 
 @NgModule({
@@ -18,6 +20,7 @@ import { CaratulaComponent } from './caratula/caratula.component';
     SongComponent,
     SongscontainerComponent,
     CaratulaComponent,
+    FilterPipe
     
   
 

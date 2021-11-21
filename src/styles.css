@@ -7,3 +7,15 @@ div.col-3>button[type="button"]{
 i.fa{
     cursor: pointer;
 }
+
+.result {
+    height: auto;
+    display: block;
+}
+
+input[type="search"]{
+    text-align: center;
+    position: relative;
+    left: 20%;
+    
+}

@@ -4,6 +4,7 @@ import { CaratulaComponent } from '../caratula/caratula.component';
 import { Song } from '../Song';
 import { SongComponent } from '../song/song.component';
 
+
 @Component({
   selector: 'app-songscontainer',
   templateUrl: './songscontainer.component.html',
@@ -14,6 +15,7 @@ export class SongscontainerComponent implements OnInit {
   @Output() songs!:Song[];
   @Output() selectSong!:Song;
   static flagList:Boolean = false;
+  search = '';
 
   constructor() { 
     this.songs =[
