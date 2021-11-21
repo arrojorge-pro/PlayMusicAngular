@@ -3,3 +3,7 @@ div.col-3>button[type="button"]{
     padding: 0 50% 0 50%;
     height: 54px;
 }
+
+i.fa{
+    cursor: pointer;
+}
