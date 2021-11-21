@@ -1,5 +1,5 @@
 <app-caratula [cancion]='selectSong'></app-caratula>
-<input type="search"  [(ngModel)]="search" placeholder="Buscar título, año, artista">
+<input type="search"  [(ngModel)]="search" placeholder="Buscar título o artista">
 
 <div *ngFor="let f of (songs | filter:search)as folder">
   <section id="result" *ngIf="search!=''">
