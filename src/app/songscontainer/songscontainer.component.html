@@ -1,23 +1,14 @@
-<app-caratula [cancion]='selectSong' ></app-caratula>
+<app-caratula [cancion]='selectSong'></app-caratula>
 <app-player [cancion]='selectSong'></app-player>
 
-<div class="container">
-  <div class="row">
 
-    <div class="col-4"></div>
 
-      <div id="fijo" class="col-4">
-          <div class="list-group">
-            <div *ngFor="let song of songs"
-                (click)="getSelectSong(song.numDisco, song.numCancion)"
-                class="list-group-item list-group-item-action list-group-item-success text-center">
-                    <div><span class="itemt">NumDisco:</span> <span class="item">{{song.numDisco}}</span> </div>
-                    <div><span class="itemt">Titulo:</span>  <span class="item">{{song.title}}</span> </div>
-                    <div><span class="itemt">Artista:</span> <span class="item">{{song.artist}}</span> </div>
-            </div>
-          </div>
-      </div>
-        
-      <div class="col-4"></div>
+<div class="list-group">
+  <div *ngFor="let song of songs"
+      (click)="getSelectSong(song.numDisco, song.numCancion)"
+      class="list-group-item list-group-item-action list-group-item-success text-center">
+          <div><span class="itemt">NumDisco:</span> <span class="item">{{song.numDisco}}</span> </div>
+          <div><span class="itemt">Titulo:</span>  <span class="item">{{song.title}}</span> </div>
+          <div><span class="itemt">Artista:</span> <span class="item">{{song.artist}}</span> </div>
   </div>
 </div>
