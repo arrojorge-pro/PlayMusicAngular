@@ -19,10 +19,10 @@ export class SongscontainerComponent implements OnInit {
 
   constructor() { 
     this.songs =[
-      (new SongComponent("mi carro","manolo",1956,"disco","estilo","assets/img/id-1.png",1,1,"assets/music/1/pokusone.mp3")),
-      (new SongComponent("mi carro2","manolo2",19562,"disco2","estilo2","assets/img/id-2.jpg",12,12,"assets/music/1/pokusone.mp3")),
-      (new SongComponent("mi carro3","manolo3",1953,"disco3","estilo3","assets/img/id-3.jpg",33,33,"assets/music/1/pokusone.mp3")),
-      (new SongComponent("mi carro4","manolo4",1954,"disco4","estilo4","assets/img/id-4.jpg",44,44,"assets/music/1/pokusone.mp3")),
+      (new SongComponent("Pokusone","Collocutor",2019,"Kaleidoscpe","Jazz","assets/music/1/kaleidoscope.jpg",1,1,"assets/music/1/pokusone.mp3")),
+      (new SongComponent("All you need is love","Beattles",1996,"Smooth Jazz","Jazz","assets/music/2/beattles.jpg",2,2,"assets/music/2/allYouNeedIsLove.mp3")),
+      (new SongComponent("Thriller","Michael Jackson",1989,"Smooth Jazz","Jazz","assets/music/3/jackson.jpg",3,3,"assets/music/3/thriller.mp3")),
+      (new SongComponent("Bohemian Rapsody","Queen",1981,"The Songs Of Queen","Jazz","assets/music/4/queen.jpg",4,4,"assets/music/4/bohemian.mp3")),
       
   ];
     
