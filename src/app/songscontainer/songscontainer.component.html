@@ -1,6 +1,8 @@
 <app-caratula [cancion]='selectSong'></app-caratula>
 <input type="search"  [(ngModel)]="search" placeholder="Buscar título o artista">
 
+<app-player [cancion]='selectSong'></app-player>
+
 <div *ngFor="let f of (songs | filter:search)as folder">
   <section id="result" *ngIf="search!=''">
     <div class="list-group">
@@ -20,7 +22,7 @@
   <h3>resultados de búsqueda</h3>
   <h4>No hay coincidencias</h4>
 </div>
-<app-player [cancion]='selectSong'></app-player>
+
 
 
 
