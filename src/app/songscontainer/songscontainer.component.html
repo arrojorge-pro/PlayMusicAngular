@@ -3,13 +3,14 @@
 
 <app-player [cancion]='selectSong'></app-player>
 
+
 <div *ngFor="let f of (songs | filter:search)as folder">
   <section id="result" *ngIf="search!=''">
     <div class="list-group">
       <h3>resultados de búsqueda</h3>
       <div
       (click)="getSelectSong(f.numDisco, f.numCancion)"
-      class="list-group-item list-group-item-action list-group-item-success text-center">
+      class="list-group-item list-group-item-action list-group-item-info text-center">
           <div><span class="itemt">NumDisco:</span> <span class="item">{{f.numDisco}}</span> </div>
           <div><span class="itemt">Titulo:</span>  <span class="item">{{f.title}}</span> </div>
           <div><span class="itemt">Artista:</span> <span class="item">{{f.artist}}</span> </div>
