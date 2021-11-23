@@ -20,7 +20,7 @@ export class CaratulaComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.cancion = new SongComponent("","",0,"","","assets/img/without.png",0,0,"");
+    
   }
 
   public getCancion(){

@@ -48,12 +48,3 @@ const canciones = [
 ]
 export default canciones;
 
-
-
-
-
-
-// (new SongComponent("Pokusone","Collocutor",2019,"Kaleidoscpe","Jazz","assets/music/1/kaleidoscope.jpg",1,1,"assets/music/1/pokusone.mp3")),
-// (new SongComponent("All you need is love","Beattles",1996,"Smooth Jazz","Jazz","assets/music/2/beattles.jpg",2,2,"assets/music/2/allYouNeedIsLove.mp3")),
-// (new SongComponent("Thriller","Michael Jackson",1989,"Smooth Jazz","Jazz","assets/music/3/jackson.jpg",3,3,"assets/music/3/thriller.mp3")),
-// (new SongComponent("Bohemian Rapsody","Queen",1981,"The Songs Of Queen","Jazz","assets/music/4/queen.jpg",4,4,"assets/music/4/bohemian.mp3")),
