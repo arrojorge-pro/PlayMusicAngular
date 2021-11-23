@@ -33,6 +33,17 @@ const canciones = [
   "numdisco":3,
   "numCancion":3,
   "url":"assets/music/3/thriller.mp3"
+},
+{
+  "title":"Bohemian Rapsody",
+  "artis":"Queen",
+  "anio":1981,
+  "disco":"The Songs Of Queen",
+  "estilo":"Jazz",
+  "caratula":"assets/music/4/queen.jpg",
+  "numdisco":4,
+  "numCancion":4,
+  "url":"assets/music/4/bohemian.mp3"
 }
 ]
 export default canciones;
