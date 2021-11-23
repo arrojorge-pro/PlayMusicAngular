@@ -9,13 +9,27 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+Instala dependencias: `npm install`
+
 Ejecuta `ng serve` - Ve a `http://localhost:4200/`
 
 ## Desarrollado hasta ahora 🚀
 
+v1.2
+
 Existe implmentada una estructura de información para construir instancias de canciones mediante atributos de clase tales como título, Artista, Año, etc..., tanto en su version resumen como en su version extendida.
 
 Se ha creado un componente Player que se encaragará de reproducir la SelectedSong posiblmente mediante APIS de audio HTML5.
+
+--
+
+v2.1
+
+    Se ha implementado la funcion de reproduccion
+    Se ha implementado un filtro para titulo y artista
+    Se ha mejorado la introduccion de datos de canciones mediante estrucura JSON
+
+--
 
 ## Orientado a Mobile
 
