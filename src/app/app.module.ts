@@ -13,6 +13,7 @@ import { FilterPipe } from './filter.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material/list';
 import {MatInputModule} from '@angular/material/input'
+import {MatCardModule} from '@angular/material/card'
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {MatInputModule} from '@angular/material/input'
     AppRoutingModule,
     BrowserAnimationsModule,
     MatListModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule
 
 
 

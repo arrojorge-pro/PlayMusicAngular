@@ -1,17 +1,15 @@
 
 
 
-<div  class="card" style="width: 20rem;">
-    <img class="card-img-top" src="{{cancion.caratula}}" alt="Card image cap">
-    <div *ngIf="cancion.title!=''" class="card-body">
-      <h5 class="card-title"><span>Disco: {{cancion.disco}}</span></h5>
-      <p  class="card-text"><span>Canción: {{cancion.numCancion}}</span></p>
-      <p  class="card-text"><span>Título: {{cancion.title}}</span></p>
-      <p  class="card-text"><span>Artista: {{cancion.artist}}</span></p>
-      <p  class="card-text"><span>Año: {{cancion.anio}}</span></p>
-      <p  class="card-text"><span>Estilo: {{cancion.estilo}}</span></p>
-      <!-- <p  class="card-text"><span>Carátula: {{cancion.caratula}}</span></p> -->
-    </div>
-   
-  </div>
+<mat-card id="detail">
+    <img mat-card-image src="{{cancion.caratula}}" alt="Caratula del disco">
+    <mat-card-content id="detail-content" *ngIf="cancion.title!=''">
+      <p class="detail-p">Canción Nº: <span style="font-weight: 600;">   {{cancion.numCancion}}</span></p>
+      <p class="detail-p">Título:     <span style="font-weight: 600;">   {{cancion.title}}     </span></p>
+      <p class="detail-p">Artista:    <span style="font-weight: 600;">   {{cancion.artist}}    </span></p>
+      <p class="detail-p">Disco:      <span style="font-weight: 600;">   {{cancion.disco}}     </span></p>
+      <p class="detail-p">Año:        <span style="font-weight: 600;">   {{cancion.anio}}      </span></p>
+      <p class="detail-p">Estilo:     <span style="font-weight: 600;">   {{cancion.estilo}}    </span></p>
+    </mat-card-content>
+</mat-card>
 

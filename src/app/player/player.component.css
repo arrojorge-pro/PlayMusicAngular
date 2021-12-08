@@ -2,8 +2,12 @@
     font-size:3rem;
 }
 /* si es lg */
-#player{ 
+#player{
 
     margin-top: 20px;
+}
+
+audio{
+  margin: 0 auto;
 }
 
