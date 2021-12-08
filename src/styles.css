@@ -1,3 +1,5 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 /* You can add global styles to this file, and also import other style files */
 div.col-3>button[type="button"]{
     padding: 0 50% 0 50%;
@@ -18,10 +20,22 @@ input[type="search"]{
     position: relative;
     left: 17%;
     margin: 10px 10px;
-    
+
 }
 
 audio{
     position: relative;
     left: 15%;
 }
+/* ----------------NUEVOS------------------------- */
+
+#artist{
+  float:right;
+}
+
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

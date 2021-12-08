@@ -6,6 +6,8 @@ import { SongComponent } from '../song/song.component';
 import canciones from '../dataSongs/DataSongs';
 
 
+
+
 @Component({
   selector: 'app-songscontainer',
   templateUrl: './songscontainer.component.html',
@@ -18,7 +20,7 @@ export class SongscontainerComponent implements OnInit {
   static flagList:Boolean = false;
   search = '';
 
-  constructor() { 
+  constructor() {
     this.songs= [
       (new SongComponent(canciones[0].title,canciones[0].artis,canciones[0].anio,canciones[0].disco,canciones[0].estilo,canciones[0].caratula,canciones[0].numdisco,canciones[0].numCancion,canciones[0].url)),
       (new SongComponent(canciones[1].title,canciones[1].artis,canciones[1].anio,canciones[1].disco,canciones[1].estilo,canciones[1].caratula,canciones[1].numdisco,canciones[1].numCancion,canciones[1].url)),
@@ -29,30 +31,30 @@ export class SongscontainerComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectSong = new SongComponent("","",0,"","","assets/img/without.png",0,0,"");
-   
+
   }
 
 
   onItemSelector(value :any) {
     console.log(value);
-    
+
     }
 
     public getSelectSong(value :any, value2:any){
-      
+
       this.songs.forEach(song => {
         if(song.numDisco==value && song.numCancion==value2){
           this.selectSong = song;
           SongscontainerComponent.flagList=true;
         }
       });
-      
+
     }
 
     flagList(){
-      
+
       return SongscontainerComponent.flagList;
-      
+
     }
 
     getSelect():Song{

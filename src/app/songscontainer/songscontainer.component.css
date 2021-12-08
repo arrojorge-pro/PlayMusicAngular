@@ -11,5 +11,38 @@ span.item{
 
 #fijo{
    width: 100%;
-  
+
 }
+
+#canciones,#resultados{
+
+  font-weight: 600;
+  font-size: x-large;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+
+#listado{
+
+  margin: 5px 0 5px 0;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(2,0,36,1) 3%, rgba(195,171,255,0.9023984593837535) 97%, rgba(255,255,255,1) 100%);
+  color:whitesmoke;
+}
+
+#listadoresultado{
+  margin: 5px 0 5px 0;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(47,113,166,0.9332107843137255) 3%, rgba(133,129,143,0.9304096638655462) 97%, rgba(255,255,255,1) 100%);
+  color:whitesmoke;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.move{
+  text-align: left;
+}
+

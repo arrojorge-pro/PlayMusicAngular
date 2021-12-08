@@ -10,7 +10,9 @@ import { SongComponent } from './song/song.component';
 import { SongscontainerComponent } from './songscontainer/songscontainer.component';
 import { CaratulaComponent } from './caratula/caratula.component';
 import { FilterPipe } from './filter.pipe';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatListModule} from '@angular/material/list';
+import {MatInputModule} from '@angular/material/input'
 
 
 @NgModule({
@@ -21,14 +23,20 @@ import { FilterPipe } from './filter.pipe';
     SongscontainerComponent,
     CaratulaComponent,
     FilterPipe
-    
-  
+
+
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    MatInputModule
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

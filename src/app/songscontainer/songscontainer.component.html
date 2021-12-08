@@ -1,38 +1,45 @@
+
+
 <app-caratula [cancion]='selectSong'></app-caratula>
-<input type="search"  [(ngModel)]="search" placeholder="Buscar título o artista">
+
+<mat-form-field class="full-width">
+  <mat-label apperance='fill'>Buscar por autor o título</mat-label>
+  <input class="move" matInput type="search" [(ngModel)]="search" placeholder="Buscar título o artista">
+</mat-form-field>
+
+
 
 <app-player [cancion]='selectSong'></app-player>
 
 
 <div *ngFor="let f of (songs | filter:search)as folder">
   <section id="result" *ngIf="search!=''">
-    <div class="list-group">
-      <h3>resultados de búsqueda</h3>
-      <div
-      (click)="getSelectSong(f.numDisco, f.numCancion)"
-      class="list-group-item list-group-item-action list-group-item-info text-center">
-          <div><span class="itemt">NumDisco:</span> <span class="item">{{f.numDisco}}</span> </div>
-          <div><span class="itemt">Titulo:</span>  <span class="item">{{f.title}}</span> </div>
-          <div><span class="itemt">Artista:</span> <span class="item">{{f.artist}}</span> </div>
-      </div>
-    </div>
+    <mat-selection-list style="text-align: center;" [multiple]="false">
+      <h3 id="resultados">Resultados de búsqueda</h3>
+      <mat-list-option id="listadoresultado"
+      (click)="getSelectSong(f.numDisco, f.numCancion)">
+          <span> Titulo: {{f.title}} </span>
+          <span> Artista:{{f.artist}}</span>
+      </mat-list-option>
+    </mat-selection-list>
   </section>
 </div>
 
 <div *ngIf="(songs | filter:search).length <1">
-  <h3>resultados de búsqueda</h3>
+  <h3>Resultados de búsqueda</h3>
   <h4>No hay coincidencias</h4>
 </div>
 
 
 
 
-<div class="list-group">
-  <div *ngFor="let song of songs"
-      (click)="getSelectSong(song.numDisco, song.numCancion)"
-      class="list-group-item list-group-item-action list-group-item-success text-center">
-          <div><span class="itemt">NumDisco:</span> <span class="item">{{song.numDisco}}</span> </div>
-          <div><span class="itemt">Titulo:</span>  <span class="item">{{song.title}}</span> </div>
-          <div><span class="itemt">Artista:</span> <span class="item">{{song.artist}}</span> </div>
-  </div>
-</div>
+<mat-selection-list style="text-align: center;" [multiple]="false">
+  <h3 id="canciones" >Canciones</h3>
+
+  <mat-list-option id="listado" *ngFor="let song of songs"
+      (click)="getSelectSong(song.numDisco, song.numCancion)">
+         <span id="title"> Canción:   {{song.title}}  </span>
+         <span id="artist"> Artista:  {{song.artist}} </span>
+  </mat-list-option>
+
+</mat-selection-list>
