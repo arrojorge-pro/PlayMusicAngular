@@ -8,8 +8,10 @@ import { Song } from '../Song';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
-  
+
   @Input() cancion!:Song;
+
+  flag:boolean = false
 
   music = new Audio;
 
@@ -19,12 +21,22 @@ export class PlayerComponent implements OnInit {
   }
 
   play(){
+
     let url:string = this.cancion.url as string;
+    if(url){
+      this.flag = true;
+    }
     this.music.src=url;
-    this.music.play();
+    this.music.play().then(()=>{if(!this.music.ended){
+      setInterval(()=>{
+        if(this.music.ended) this.flag=false;
+      },1000)
+    }});
+
   }
 
   stop(){
     this.music.pause();
+    this.flag = false;
   }
 }

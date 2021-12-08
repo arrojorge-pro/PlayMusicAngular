@@ -1,2 +1,9 @@
-
-<audio controls src="{{cancion.url}}"></audio>
+<mat-card id="player">
+  <mat-card-content>
+    <section style="text-align: center;">
+      <mat-icon style="margin:5px; cursor:pointer;" (click)='play()'>play_circle_outline_large</mat-icon>
+      <mat-icon style="margin:5px; cursor:pointer;" (click)='stop()'>stop</mat-icon>
+    </section>
+    <mat-progress-bar *ngIf="flag" style="margin:0 auto; width: 75%;" mode="indeterminate"></mat-progress-bar>
+  </mat-card-content>
+</mat-card>

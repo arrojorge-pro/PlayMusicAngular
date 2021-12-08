@@ -11,10 +11,14 @@ import { SongscontainerComponent } from './songscontainer/songscontainer.compone
 import { CaratulaComponent } from './caratula/caratula.component';
 import { FilterPipe } from './filter.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//Angular Material
 import {MatListModule} from '@angular/material/list';
 import {MatInputModule} from '@angular/material/input'
 import {MatCardModule} from '@angular/material/card'
-
+import {MatIconModule} from '@angular/material/icon'
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatToolbarModule} from '@angular/material/toolbar'
 
 @NgModule({
   declarations: [
@@ -24,9 +28,6 @@ import {MatCardModule} from '@angular/material/card'
     SongscontainerComponent,
     CaratulaComponent,
     FilterPipe
-
-
-
   ],
   imports: [
     BrowserModule,
@@ -35,10 +36,10 @@ import {MatCardModule} from '@angular/material/card'
     BrowserAnimationsModule,
     MatListModule,
     MatInputModule,
-    MatCardModule
-
-
-
+    MatCardModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
