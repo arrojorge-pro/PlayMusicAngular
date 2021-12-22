@@ -10,7 +10,7 @@ import { SongscontainerComponent } from './songscontainer/songscontainer.compone
 })
 export class AppComponent {
   title = 'spaworker';
-  
+
 
   selectSong!:Song;
 

@@ -9,7 +9,7 @@ import { Song } from '../Song';
 })
 export class PlayerComponent implements OnInit {
 
-  @Input() cancion!:Song;
+  @Input() cancion!:any;
 
   flag:boolean = false
 
@@ -22,16 +22,22 @@ export class PlayerComponent implements OnInit {
 
   play(){
 
-    let url:string = this.cancion.url as string;
+
+    let url:any = this.cancion.pipe().subscribe((val: any) => {
+      this.music.src=(val[0].url);
+      this.music.play().then(()=>{
+        setInterval(()=>{
+          if(this.music.ended) this.flag=false;
+        },1000)
+      });
+    });
+
+
     if(url){
       this.flag = true;
     }
-    this.music.src=url;
-    this.music.play().then(()=>{if(!this.music.ended){
-      setInterval(()=>{
-        if(this.music.ended) this.flag=false;
-      },1000)
-    }});
+
+
 
   }
 

@@ -1,5 +1,4 @@
 
-
 const canciones = [
 {
   "title":'Pokusone',
@@ -46,5 +45,6 @@ const canciones = [
   "url":"assets/music/4/bohemian.mp3"
 }
 ]
+
 export default canciones;
 

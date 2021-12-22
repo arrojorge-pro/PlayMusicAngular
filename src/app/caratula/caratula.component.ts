@@ -10,17 +10,17 @@ import { SongscontainerComponent } from '../songscontainer/songscontainer.compon
 })
 export class CaratulaComponent implements OnInit {
 
- @Input() cancion!:Song;
+ @Input() cancion!:any;
 
   constructor() {
-    
-  
+
+
     // CaratulaComponent.cancion = SongscontainerComponent.getSelect();
 
    }
 
   ngOnInit(): void {
-    
+
   }
 
   public getCancion(){

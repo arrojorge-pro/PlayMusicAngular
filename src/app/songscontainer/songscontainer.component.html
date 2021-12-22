@@ -1,5 +1,6 @@
 
 
+
 <app-caratula [cancion]='selectSong'></app-caratula>
 
 <mat-form-field class="full-width">
@@ -12,14 +13,14 @@
 <app-player [cancion]='selectSong'></app-player>
 
 
-<div *ngFor="let f of (songs | filter:search)as folder">
+<div *ngFor="let f of (items | filter:search | async)as folder">
   <section id="result" *ngIf="search!=''">
     <mat-selection-list style="text-align: center;" [multiple]="false">
       <h3 id="resultados">Resultados de búsqueda</h3>
       <mat-list-option id="listadoresultado"
-      (click)="getSelectSong(f.numDisco, f.numCancion)">
+      (click)="getSelectSong(f.numCancion)">
           <span> Titulo: {{f.title}} </span>
-          <span> Artista:{{f.artist}}</span>
+          <span> Artista:{{f.artis}}</span>
       </mat-list-option>
     </mat-selection-list>
   </section>
@@ -36,10 +37,10 @@
 <mat-selection-list style="text-align: center;" [multiple]="false">
   <h3 id="canciones" >Canciones</h3>
 
-  <mat-list-option id="listado" *ngFor="let song of songs"
-      (click)="getSelectSong(song.numDisco, song.numCancion)">
+  <mat-list-option id="listado" *ngFor="let song of items | async"
+      (click)="getSelectSong(song.numCancion)">
          <span id="title"> Canción:   {{song.title}}  </span>
-         <span id="artist"> Artista:  {{song.artist}} </span>
+         <span id="artist"> Artista:  {{song.artis}} </span>
   </mat-list-option>
 
 </mat-selection-list>

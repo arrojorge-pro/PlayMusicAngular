@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "p10-spaworker": {
+      "hosting": {
+        "spaworker": [
+          "p10-spaworker"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "p10-spaworker"
+  }
+}
