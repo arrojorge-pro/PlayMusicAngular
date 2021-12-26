@@ -21,6 +21,9 @@ import {MatCardModule} from '@angular/material/card'
 import {MatIconModule} from '@angular/material/icon'
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button'
+
+//firebase
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
@@ -28,6 +31,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore'
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat'
 import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+
+
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
@@ -52,9 +58,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatProgressBarModule,
     MatToolbarModule,
+    MatButtonModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+
   ],
   providers: [
     ScreenTrackingService,UserTrackingService

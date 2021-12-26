@@ -12,3 +12,21 @@
 .detail-p{
   margin-bottom: 10px;
 }
+
+input{
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  margin: 5px auto;
+  border: none;
+  border-bottom: 1px solid black;
+  font-style: italic;
+}
+
+label{
+  margin-bottom: 33px;
+}
+
+button{
+  margin-top: 10px;
+}

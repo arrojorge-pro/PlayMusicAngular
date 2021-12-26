@@ -6,12 +6,21 @@
     <mat-card-content id="detail-content" *ngIf="cancion.title!=''">
       <div *ngFor="let cancion of cancion |async">
         <img mat-card-image src="{{cancion.caratula}}" alt="Caratula del disco">
-        <p class="detail-p">Canción Nº: <span style="font-weight: 600;">   {{cancion.numCancion}}</span></p>
-        <p class="detail-p">Título:     <span style="font-weight: 600;">   {{cancion.title}}     </span></p>
-        <p class="detail-p">Artista:    <span style="font-weight: 600;">   {{cancion.artist}}    </span></p>
-        <p class="detail-p">Disco:      <span style="font-weight: 600;">   {{cancion.disco}}     </span></p>
-        <p class="detail-p">Año:        <span style="font-weight: 600;">   {{cancion.anio}}      </span></p>
-        <p class="detail-p">Estilo:     <span style="font-weight: 600;">   {{cancion.estilo}}    </span></p>
+        <form style="font-size: 1em;" (ngSubmit)="onSubmit($event)">
+        <label for="">Canción Nº:</label>
+        <input class="detail-p" value="{{cancion.numCancion}}" name="numCancion">
+        <label for="">Título:</label>
+        <input class="detail-p" value="{{cancion.title}}" name="title">
+        <label for="">Artista:</label>
+        <input class="detail-p" value="{{cancion.artis}}" name="artis">
+        <label for="">Disco:</label>
+        <input class="detail-p" value="{{cancion.disco}}" name="disco">
+        <label for="">Año</label>
+        <input class="detail-p" value="{{cancion.anio}}" name="anio">
+        <label for="">Estilo</label>
+        <input class="detail-p" value="{{cancion.estilo}}" name="estilo">
+        <button mat-flat-button color="primary">Salvar Cambios</button>
+      </form>
       </div>
     </mat-card-content>
 </mat-card>
