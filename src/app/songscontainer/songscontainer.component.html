@@ -13,7 +13,7 @@
 <app-player [cancion]='selectSong'></app-player>
 
 
-<div *ngFor="let f of (items | filter:search | async)as folder">
+<div *ngFor="let f of (songs | filter:search | async) as folder">
   <section id="result" *ngIf="search!=''">
     <mat-selection-list style="text-align: center;" [multiple]="false">
       <h3 id="resultados">Resultados de búsqueda</h3>
@@ -26,7 +26,7 @@
   </section>
 </div>
 
-<div *ngIf="(songs | filter:search).length <1">
+<div *ngIf="(songs | filter:search)">
   <h3>Resultados de búsqueda</h3>
   <h4>No hay coincidencias</h4>
 </div>

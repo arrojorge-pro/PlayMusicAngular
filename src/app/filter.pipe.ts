@@ -11,9 +11,9 @@ export class FilterPipe implements PipeTransform {
 
   transform(value: any, searchValue:any): any {
     if (!searchValue) return value;
-    return value.filter((v:any) => 
-    v.title.toLowerCase().indexOf(searchValue.toLowerCase()) > -1 || 
-    v.artist.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)
+    return value.filter((v:any) =>
+    v.title.toLowerCase().indexOf(searchValue.toLowerCase()) > -1 ||
+    v.artis.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)
 
   }
 

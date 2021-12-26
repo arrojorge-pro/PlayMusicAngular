@@ -17,16 +17,39 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SongscontainerComponent implements OnInit {
 
-  @Output() songs:any = canciones;
+  @Output() songs:any;
   @Output() selectSong!:any;
   static flagList:Boolean = false;
   search = '';
-
+  public jsonSong!:Song[];
+  data!:any;
 
   items: Observable<any[]>;
   constructor(public firestore: AngularFirestore, http: HttpClient) {
     this.items = firestore.collection('canciones').valueChanges();
-    console.log(this.items);
+
+    this.songs = this.items;
+
+    //console.log(this.songs);
+
+
+    // *** INTENTO DE HACER FUNCIONAR EL FILTRO ****
+    // this.songs
+    // .map((data: Array<any>) => {
+    //   let result:Array<Song> = [];
+    //   if (data) {
+    //     data.forEach((erg) => {
+    //       result.push(new SongComponent(erg.title, erg.artist, erg.anio, erg.disco, erg.estilo, erg.caratula,erg.numDisco,erg.numCancion,erg.url ));
+    //     });
+    //     }
+    //     return result; // <<<=== missing return
+    //   })
+    //   .subscribe((val: any) => {
+    //     this.jsonSong=val;
+    //   });
+
+
+
 
   }
 
@@ -45,6 +68,7 @@ export class SongscontainerComponent implements OnInit {
 
       this.selectSong = this.firestore.collection('canciones', ref => ref.where('numCancion', '==', numCancion)).valueChanges();
       SongscontainerComponent.flagList=true
+
 
     }
 
