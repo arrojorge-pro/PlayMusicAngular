@@ -3,12 +3,11 @@ import { AppComponent } from '../app.component';
 import { CaratulaComponent } from '../caratula/caratula.component';
 import { Song } from '../Song';
 import { SongComponent } from '../song/song.component';
-import canciones from '../dataSongs/DataSongs';
 import { getDatabase, ref, get, child, set} from "firebase/database";
-import {BdService} from '../bd.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { FilterPipe } from '../filter.pipe';
 
 @Component({
   selector: 'app-songscontainer',
@@ -21,7 +20,7 @@ export class SongscontainerComponent implements OnInit {
   @Output() selectSong!:any;
   static flagList:Boolean = false;
   search = '';
-  public jsonSong!:Song[];
+  public jsonSong = new Array();
   data!:any;
 
   items: Observable<any[]>;
@@ -29,6 +28,15 @@ export class SongscontainerComponent implements OnInit {
     this.items = firestore.collection('canciones').valueChanges();
 
     this.songs = this.items;
+
+    this.songs.pipe().subscribe((val: any) => {
+      //console.log(val);
+      val.forEach((element: any) => {
+        this.jsonSong.push(element);
+
+      });
+
+      });
 
     //console.log(this.songs);
 
