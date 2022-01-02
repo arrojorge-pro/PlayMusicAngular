@@ -21,7 +21,6 @@ export class SongscontainerComponent implements OnInit {
   static flagList:Boolean = false;
   search = '';
   public jsonSong = new Array();
-  data!:any;
 
   items: Observable<any[]>;
   constructor(public firestore: AngularFirestore, http: HttpClient) {
@@ -38,27 +37,6 @@ export class SongscontainerComponent implements OnInit {
 
       });
 
-    //console.log(this.songs);
-
-
-    // *** INTENTO DE HACER FUNCIONAR EL FILTRO ****
-    // this.songs
-    // .map((data: Array<any>) => {
-    //   let result:Array<Song> = [];
-    //   if (data) {
-    //     data.forEach((erg) => {
-    //       result.push(new SongComponent(erg.title, erg.artist, erg.anio, erg.disco, erg.estilo, erg.caratula,erg.numDisco,erg.numCancion,erg.url ));
-    //     });
-    //     }
-    //     return result; // <<<=== missing return
-    //   })
-    //   .subscribe((val: any) => {
-    //     this.jsonSong=val;
-    //   });
-
-
-
-
   }
 
   ngOnInit(): void {
@@ -72,28 +50,26 @@ export class SongscontainerComponent implements OnInit {
 
     }
 
-    public getSelectSong(numCancion :any){
+  public getSelectSong(numCancion :any){
 
-      this.selectSong = this.firestore.collection('canciones', ref => ref.where('numCancion', '==', numCancion)).valueChanges();
-      SongscontainerComponent.flagList=true
+    this.selectSong = this.firestore.collection('canciones', ref => ref.where('numCancion', '==', numCancion)).valueChanges();
+    SongscontainerComponent.flagList=true
 
 
-    }
+  }
 
-    flagList(){
+  flagList(){
 
-      return SongscontainerComponent.flagList;
+    return SongscontainerComponent.flagList;
 
-    }
+  }
 
-    getSelect():Song{
-      return this.selectSong;
-    }
+  getSelect():Song{
+    return this.selectSong;
+  }
 
 
 
 }
-function updateStarCount(postElement: any, data: any) {
-  throw new Error('Function not implemented.');
-}
+
 
