@@ -21,7 +21,7 @@ Deploy en servidor remoto:
 
 ## Versiones de Desarrollo (tags) 🚀
 
-###v1.2
+### v1.2
 
 Existe implmentada una estructura de información para construir instancias de canciones mediante atributos de clase tales como título, Artista, Año, etc..., tanto en su version resumen como en su version extendida.
 
@@ -29,7 +29,7 @@ Se ha creado un componente Player que se encaragará de reproducir la SelectedSo
 
 --
 
-###v2.1
+### v2.1
 
 -Se ha implementado la funcion de reproduccion
 -Se ha implementado un filtro para titulo y artista
@@ -37,7 +37,7 @@ Se ha creado un componente Player que se encaragará de reproducir la SelectedSo
 
 --
 
-###v3.2
+### v3.2
 
 Se ha implementado angular material en los siguientes aspectos:
 
@@ -48,7 +48,7 @@ Se ha implementado angular material en los siguientes aspectos:
 
 --
 
-###v4.1
+### v4.1
 
 Se ha llevado a cabo la integración con Firebase y la implementación del formulario para cambiar los detalles de las canciones.
 
