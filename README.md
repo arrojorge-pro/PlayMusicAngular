@@ -13,7 +13,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 -Ejecuta `ng serve` - Ve a `http://localhost:4200/`
 
-## Desarrollado hasta ahora 🚀
+## Production server
+
+Deploy en servidor remoto:
+
+[SpaWorker Online](angular.desarrojoweb.org)
+
+## Versiones de Desarrollo (tags) 🚀
 
 ###v1.2
 
@@ -39,6 +45,17 @@ Se ha implementado angular material en los siguientes aspectos:
 -Se ha aplicado el componente card al detalle de la cancion con algunos efectos CSS3
 -Se ha modificado el reprodutor, prescidiendo de la fucionalidad html5, para incorporar material al mismo.
 -Modificaciones de aspecto en general.
+
+--
+
+###v4.1
+
+Se ha llevado a cabo la integración con Firebase y la implementación del formulario para cambiar los detalles de las canciones.
+
+-Se ha integrado Firebase mediante AngularFire.
+-Se ha implementado un update de AngularFire para actulizar los cambios realizados en el detalle de las canciones.
+-Se ha re-implementado la funcionalidad del filtro.
+-Se han llevado a cabo pruebas de caja negra.
 
 ## Orientado a Mobile
 
