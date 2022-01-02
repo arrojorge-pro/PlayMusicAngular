@@ -17,7 +17,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Deploy en servidor remoto:
 
-[SpaWorker Online](angular.desarrojoweb.org)
+[SpaWorker Online](http://angular.desarrojoweb.org)
 
 ## Versiones de Desarrollo (tags) 🚀
 
